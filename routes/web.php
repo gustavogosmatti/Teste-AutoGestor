@@ -22,9 +22,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/registrar', 'UsuarioController@registrar')->name('registrar');
     Route::post('/salvar', 'UsuarioController@salvar')->name('salvar');
     Route::get('/home', 'AutenticacaoController@privada')->name('dashboard');
+
     Route::get('/usuarios', 'UsuarioController@listar')->name('listar');
     Route::get('/usuarios/{id}/editar', 'UsuarioController@editar')->name('editar');
     Route::post('/usuarios/{id}/atualizar', 'UsuarioController@atualizar')->name('atualizar');
+
+    Route::get('/usuarios/{id}/excluir', 'UsuarioController@excluir')->name('excluir');
+    Route::post('/usuarios/{id}/deletar', 'UsuarioController@deletar')->name('deletar');
 
     Route::get('/produtos', 'ProdutosController@listar')->name('listarProdutos');
     Route::get('/marcas', 'MarcasController@listar')->name('listarMarcas');

@@ -57,4 +57,19 @@ class UsuarioController extends Controller
 
         return redirect()->route('dashboard');
     }
+    public function excluir($id)
+    {
+        $this->authorize('delete', Usuario::class);
+
+        $usuario = Usuario::find($id);
+        return view('usuarios.excluir', compact('usuario'));
+    }
+    public function deletar(Request $request, $id){
+        $this->authorize('delete', Usuario::class);
+        
+        $dados = $request->all();
+        $usuario = Usuario::find($id);
+        $usuario->delete($dados);
+        return redirect()->route('listar');
+    }
 }

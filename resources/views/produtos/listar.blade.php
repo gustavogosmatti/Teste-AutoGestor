@@ -1,5 +1,6 @@
 @extends('shared.base')
 @section('content')
+<h3>Produtos</h3>
     <table id="table_listar" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>

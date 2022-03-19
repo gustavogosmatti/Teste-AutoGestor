@@ -57,7 +57,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 @if (Auth::check())
                     <li class="navbar-nav nav-link">
