@@ -25,6 +25,10 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
     <style>
         /* Stackoverflow preview fix, please ignore */
         .navbar-nav {
@@ -47,7 +51,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/dashboard">Teste AutoGestor</a>
+        <a class="navbar-brand" href="/home">Teste AutoGestor</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,11 +64,11 @@
                         <a href="#">Olá, {{ Auth::user()->login }} </a>
                     </li>
                     <li class="nav-link">
-                        <a href="{{ route('logout') }}">Logout</a>
+                        <a href="{{ route('logout') }}">Sair</a>
                     </li>
                 @else
                     <li class="nav-link">
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Entrar</a>
                     </li>
                 @endif
             </ul>

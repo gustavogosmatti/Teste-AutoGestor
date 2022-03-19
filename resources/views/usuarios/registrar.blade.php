@@ -3,7 +3,7 @@
 @section('content')
 <div class="panel panel-default">
 
-<div class="panel-heading"><h3>Cadastre-se</h3></div>
+<div class="panel-heading"><h3>Cadastro de novo usuário</h3></div>
 <div class="panel-body">
 <form class="form-horizontal" method="post" action="{{route ('salvar')}}">
 {{ csrf_field() }}
@@ -25,7 +25,9 @@
       <select class="form-control" name="cargo">
         <option value="Administrador">Administrador</option>
         <option value="Gerente">Gerente</option>
-        <option value="Atendente">Atendente</option>
+        <option value="Operador nv 1">Operador nv. 1</option>
+        <option value="Operador nv 2">Operador nv. 2</option>
+        <option value="Operador nv 3">Operador nv. 3</option>
       </select>
     </div>
   </div>

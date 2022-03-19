@@ -55,6 +55,6 @@ class UsuarioController extends Controller
         $dados['senha'] = bcrypt($dados['senha']);
         Usuario::create($dados);
 
-        return redirect()->route('home');
+        return redirect()->route('dashboard');
     }
 }

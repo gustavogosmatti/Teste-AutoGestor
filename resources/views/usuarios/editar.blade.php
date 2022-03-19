@@ -25,7 +25,9 @@
       <select class="form-control" name="cargo" value="{{$usuario->cargo}}">
         <option {{($usuario->cargo == 'Administrador'  ? 'selected' : '')}}>Administrador</option>
         <option {{($usuario->cargo == 'Gerente'  ? 'selected' : '')}}>Gerente</option>
-        <option {{($usuario->cargo == 'Atendente'  ? 'selected' : '')}}>Atendente</option>
+        <option {{($usuario->cargo == 'Operador nv. 1'  ? 'selected' : '')}}>Operador nv. 1</option>
+        <option {{($usuario->cargo == 'Operador nv. 2'  ? 'selected' : '')}}>Operador nv. 2</option>
+        <option {{($usuario->cargo == 'Operador nv. 3'  ? 'selected' : '')}}>Operador nv. 3</option>
         
       </select>
     </div>

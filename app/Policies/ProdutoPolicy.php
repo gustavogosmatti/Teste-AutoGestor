@@ -20,7 +20,7 @@ class ProdutoPolicy
      */
     public function view(Usuario $user)
     {
-        return $user->cargo === 'Gerente';
+        return $user->cargo === 'Gerente' or $user->cargo === 'Operador nv. 1' or $user->cargo === 'Operador nv. 2' or $user->cargo === 'Operador nv. 3';
     }
 
     /**

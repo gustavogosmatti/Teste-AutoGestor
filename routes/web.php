@@ -21,10 +21,12 @@ Route::get('/logout', 'AutenticacaoController@logout')->name('logout');
 Route::middleware(['auth'])->group(function () {
     Route::get('/registrar', 'UsuarioController@registrar')->name('registrar');
     Route::post('/salvar', 'UsuarioController@salvar')->name('salvar');
-    Route::get('/dashboard', 'AutenticacaoController@privada')->name('dashboard');
+    Route::get('/home', 'AutenticacaoController@privada')->name('dashboard');
     Route::get('/usuarios', 'UsuarioController@listar')->name('listar');
     Route::get('/usuarios/{id}/editar', 'UsuarioController@editar')->name('editar');
     Route::post('/usuarios/{id}/atualizar', 'UsuarioController@atualizar')->name('atualizar');
 
     Route::get('/produtos', 'ProdutosController@listar')->name('listarProdutos');
+    Route::get('/marcas', 'MarcasController@listar')->name('listarMarcas');
+    Route::get('/categorias', 'CategoriasController@listar')->name('listarCategorias');
 });
