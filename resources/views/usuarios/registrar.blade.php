@@ -46,7 +46,7 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-        <a href="/home" class="btn btn-warning">Voltar</a>
+        <a href="{{ route('listar') }}" class="btn btn-warning">Voltar</a>
         <button type="reset" class="btn btn-default">Cancelar</button>
         <button type="submit" class="btn btn-primary">Registrar</button>
     </div>

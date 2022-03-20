@@ -25,9 +25,9 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-  
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 
     <style>
         /* Stackoverflow preview fix, please ignore */
@@ -50,28 +50,33 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/home">Teste AutoGestor</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Teste AutoGestor</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 @if (Auth::check())
-                    <li class="navbar-nav nav-link">
-                        <a href="#">Olá, {{ Auth::user()->login }} </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{{ route('logout') }}">Sair</a>
-                    </li>
-                @else
-                    <li class="nav-link">
-                        <a href="{{ route('login') }}">Entrar</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ route('dashboard') }}">Início</a>
                     </li>
                 @endif
             </ul>
+            @if (Auth::check())
+                <li class="nav-link">
+                    <a class="btn btn-secondary" href="#">Olá, {{ Auth::user()->login }} </a>
+                </li>
+                <li class="nav-link">
+                    <a class="btn btn-secondary" href="{{ route('logout') }}">Sair</a>
+                </li>
+            @else
+                <li class="nav-link">
+                    <a class="btn btn-secondary" href="{{ route('login') }}">Entrar</a>
+                </li>
+            @endif
         </div>
     </nav>
     <div class="container">

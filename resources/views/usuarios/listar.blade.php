@@ -2,6 +2,9 @@
 @section('content')
     <div class="panel panel-default">
         <h3>Lista de Usuários</h3>
+        <a href="{{ route('registrar') }}" class="btn btn-success">Incluir</a>
+        <br>
+        <br>
         <div class="row">
             <div class="col-md-12">
                 <table id="table_listar" class="table table-bordered">
@@ -35,6 +38,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <a href="{{ route('dashboard') }}" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>

@@ -29,9 +29,9 @@ class MarcaPolicy
      * @param  \App\User  $user
      * @return mixed
      */
-    public function create(User $user)
+    public function create(Usuario $user)
     {
-        //
+        return $user->cargo === 'Gerente';
     }
 
     /**
@@ -41,9 +41,10 @@ class MarcaPolicy
      * @param  \App\Marcas  $marcas
      * @return mixed
      */
-    public function update(User $user, Marcas $marcas)
+    public function update(Usuario $user)
     {
-        //
+        $cargos = array('Gerente', 'Operador nv. 3');
+        return in_array($user->cargo, $cargos);
     }
 
     /**
@@ -53,8 +54,9 @@ class MarcaPolicy
      * @param  \App\Marcas  $marcas
      * @return mixed
      */
-    public function delete(User $user, Marcas $marcas)
+    public function delete(Usuario $user)
     {
-        //
+        $cargos = array('Gerente');
+        return in_array($user->cargo, $cargos);
     }
 }

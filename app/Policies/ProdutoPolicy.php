@@ -2,8 +2,6 @@
 
 namespace App\Policies;
 
-use App\User;
-use App\Produto;
 use App\Usuario;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
@@ -20,7 +18,8 @@ class ProdutoPolicy
      */
     public function view(Usuario $user)
     {
-        return $user->cargo === 'Gerente' or $user->cargo === 'Operador nv. 1' or $user->cargo === 'Operador nv. 2' or $user->cargo === 'Operador nv. 3';
+        $cargos = array('Gerente','Operador nv. 1', 'Operador nv. 2', 'Operador nv. 3');
+        return in_array($user->cargo, $cargos);
     }
 
     /**
@@ -29,9 +28,9 @@ class ProdutoPolicy
      * @param  \App\User  $user
      * @return mixed
      */
-    public function create(User $user)
+    public function create(Usuario $user)
     {
-        //
+        return $user->cargo === 'Gerente';
     }
 
     /**
@@ -41,9 +40,10 @@ class ProdutoPolicy
      * @param  \App\Produto  $produto
      * @return mixed
      */
-    public function update(User $user, Produto $produto)
+    public function update(Usuario $user)
     {
-        //
+        $cargos = array('Gerente','Operador nv. 1', 'Operador nv. 2', 'Operador nv. 3');
+        return in_array($user->cargo, $cargos);
     }
 
     /**
@@ -53,8 +53,9 @@ class ProdutoPolicy
      * @param  \App\Produto  $produto
      * @return mixed
      */
-    public function delete(User $user, Produto $produto)
+    public function delete(Usuario $user)
     {
-        //
+        $cargos = array('Gerente');
+        return in_array($user->cargo, $cargos);
     }
 }

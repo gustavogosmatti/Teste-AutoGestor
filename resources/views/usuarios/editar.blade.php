@@ -47,7 +47,7 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-        <button href="/listar" class="btn btn-default">Cancelar</button>
+        <a href="{{ route('listar') }}" class="btn btn-default">Cancelar</a>
         <button type="submit" class="btn btn-primary">Editar</button>
     </div>
   </div>
