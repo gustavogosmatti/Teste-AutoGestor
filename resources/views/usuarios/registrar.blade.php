@@ -25,9 +25,9 @@
       <select class="form-control" name="cargo">
         <option value="Administrador">Administrador</option>
         <option value="Gerente">Gerente</option>
-        <option value="Operador nv 1">Operador nv. 1</option>
-        <option value="Operador nv 2">Operador nv. 2</option>
-        <option value="Operador nv 3">Operador nv. 3</option>
+        <option value="Operador nv. 1">Operador nv. 1</option>
+        <option value="Operador nv. 2">Operador nv. 2</option>
+        <option value="Operador nv. 3">Operador nv. 3</option>
       </select>
     </div>
   </div>
