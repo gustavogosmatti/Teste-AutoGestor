@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 19-Mar-2022 às 01:49
+-- Tempo de geração: 20-Mar-2022 às 17:08
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -96,16 +96,19 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `cargo` varchar(125) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `login`, `email`, `senha`, `remember_token`, `created_at`, `updated_at`, `cargo`) VALUES
-(1, 'admin', 'admin', 'admin@hotmail.com', '$2y$10$uPt4pYEyXfpnfrFRfBY6beqJkVxC7k.GQ1lL1wthtdlmkPub0Giya', 'MHO77OX1yu4mL4Jas6c2TMtuTfjQTHzUz59kgfZUpKz0eys2Pp2xInRDxOBB', '2022-03-18 01:48:23', '2022-03-18 02:03:40', 'Administrador'),
-(2, 'Gustavo', 'gustavoag', 'gustavoag@hotmail.com', '$2y$10$WvUuFEgoTOb7wA227FvOIefGFXeVBnh8pbPO5r9Z99k1kphzd0pyK', '8lWEtAsnepnwHbqwBPFijaPKzsFBxoepth1vSQTtHnHLJTkraRsj4ITC3367', '2022-03-18 02:07:31', '2022-03-19 04:41:16', 'Operador nv. 2'),
-(5, 'Lucas', 'lucas', 'lucas@hotmail.com', '$2y$10$QBLv7zmuExEMrnZI2Rg1.uJrcKZwHpmNdzfMQkt4bpJMZgtgUX7Wi', 'yLWTUrWXqH4eipl0ZYyEsGrExpQPPKsZomK1UYjzx3WVuYCCFBsilA08k626', '2022-03-19 02:30:17', '2022-03-19 04:37:22', 'Operador nv. 1');
+(1, 'admin', 'admin', 'admin@hotmail.com', '$2y$10$B6xq7zmqvc2YgzS62Y5gq.481aD15TdjVFjkEXS6MQ.HkTMi/XV/O', 'yIGonAD7xaXGDaxijx3xnHnGuDZGwyBlIQ3yOjiXyqfutVNRoCSu5XUngRfI', '2022-03-18 01:48:23', '2022-03-20 19:54:27', 'Administrador'),
+(13, 'teste', 'teste', 'teste@hotmail.com', '$2y$10$D2x87tMNen1TuvkWcCSBR.EW.OcSvbrhwRe82A2vT7u1RbbW352KC', '1FtB00xDNgbFxSl0SYJ3fqjYEdk56Ik3rF4lgfLr08NyFaYeaO96Z2uWudW2', '2022-03-20 20:04:36', '2022-03-20 20:04:36', 'Operador nv. 2'),
+(9, 'gustavo', 'gustavoag', 'gustavo@hotmail.com', '$2y$10$XTRRbgfh7C91if2YG6XOJuMMfWBXt1nvkOvgD.GOg2ukFtvznxqe2', 'FZzj2k2l5t5C5sDkgESlYMdqfdgTWAwM8plxgCGLUQ5Js4hlqfoPzqDA9jTs', '2022-03-20 19:03:04', '2022-03-20 19:03:04', 'Gerente'),
+(10, 'primeiro', 'primeiro', 'primeiro@hotmail.com', '$2y$10$DDZzkGBReVDR2wGOStAoUOR6vJ2t8QCMDwRpHam64tqT9Cj32Nrgu', 'L5XeNVeCNc3dzNjBg3ot4JTzlD0E5eEL7rr3SJR1aegnObhemA9A8GLsJeFM', '2022-03-20 19:56:41', '2022-03-20 19:58:51', 'Operador nv. 1'),
+(11, 'segundo', 'segundo', 'segundo@hotmail.com', '$2y$10$JsmkrTdMKciPVYuSxFI90OcpajLn4Q6axF1ICPkWf5LXdaaiuH2fi', 'AU4kmscVhgO9At6VP8vikhK4M4euZxF6VmdjmzrrXRHxshaNhw7kXwFtVN3M', '2022-03-20 19:57:26', '2022-03-20 19:57:43', 'Operador nv. 2'),
+(12, 'terceiro', 'terceiro', 'terceiro@hotmail.com', '$2y$10$jJD5XUq8jG8oon6EYU3Pg.2hw11/gKuSDrybL/UWV4Hr6Y0h9VYXG', '4MAEpwdg5rREqa2WIEdE5IVLKSbInod1BXR6tz0r2XpXyHZ7iWCl4UMv2qCZ', '2022-03-20 19:59:18', '2022-03-20 19:59:18', 'Operador nv. 3');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
